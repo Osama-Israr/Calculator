@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(11, 3, 31); text-align: center; color: #fff; font-family: Arial, Helvetica, sans-serif;">
+    <h2 id="demo"></h2>
+    <h3 id="result"></h3>
+
+    <script>
+        alert("Note: First of all you enter first number then second number then choose one operator (+, -, *, /, **)");
+
+        var num1 = parseInt(prompt("Enter first number: "));
+        var num2 = parseInt(prompt("Enter second number: "));
+        var operator = prompt("Enter operator: ");
+        var result
+
+        if (operator == "+") {
+            alert(num1 + num2);
+            document.getElementById("result").innerHTML = num1 + num2;
+        }
+        else if (operator == "-") {
+            alert(num1 - num2);
+            document.getElementById("result").innerHTML = "Your result is: " + num1 - num2;
+        }
+        else if (operator == "*") {
+            alert(num1 * num2);
+            document.getElementById("result").innerHTML = "Your result is: " + num1 * num2;
+        }
+        else if (operator == "/") {
+            alert(num1 / num2);
+            document.getElementById("result").innerHTML = "Your result is: " + num1 / num2;
+        }
+        else if (operator == "**") {
+            alert(num1 ** num2);
+            document.getElementById("result").innerHTML = "Your result is: " + num1 ** num2;
+        }
+        else {
+            alert("Invalid Input");
+            document.getElementById("result").innerHTML = "Invalid Input";
+        }
+
+        document.getElementById("demo").innerHTML = 
+        "You done very well Your selected values is : " + 
+        num1 + " " + operator + " " + num2;
+    </script>
+</body>
+</html>
